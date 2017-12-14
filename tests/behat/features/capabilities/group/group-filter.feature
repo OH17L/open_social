@@ -13,3 +13,8 @@ Feature: Filter Groups
       | title              | description      | author     | type          | language |
       | Behat Open Group   | My description   | Group User | open_group    | en       |
       | Behat Closed Group | My description 2 | Group User | closed_group  | en       |
+
+    Given I am logged in as an "authenticated user"
+    When I am on "/all-groups"
+    Then I should see "FILTER" in the "Sidebar second"
+    And I should see "Group type" in the "Sidebar second"
