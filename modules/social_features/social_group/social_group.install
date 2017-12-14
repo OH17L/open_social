@@ -79,7 +79,9 @@ function _social_group_set_permissions() {
  */
 function _social_group_get_permissions($role) {
   // Anonymous.
-  $permissions['anonymous'] = [];
+  $permissions['anonymous'] = [
+    'access group search',
+  ];
 
   // Authenticated.
   $permissions['authenticated'] = array_merge($permissions['anonymous'], [
@@ -317,4 +319,14 @@ function social_group_update_8009() {
     user_role_grant_permissions($role->id(), $permissions);
   }
 
+}
+
+/**
+ * Open access to groups overview page for an anonymous user.
+ */
+function social_group_update_8010() {
+  /** @var \Drupal\user\Entity\Role $role */
+  foreach (Role::loadMultiple() as $role) {
+    user_role_grant_permissions($role->id(), ['access group search']);
+  }
 }
