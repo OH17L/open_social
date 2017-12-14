@@ -1,0 +1,11 @@
+display:
+  default:
+    display_options:
+      filters:
+        type:
+          value:
+            open_group-group_membership: open_group-group_membership
+            closed_group-group_membership: closed_group-group_membership
+            course_basic-group_membership: course_basic-group_membership
+            course_advanced-group_membership: course_advanced-group_membership
+            public_group-group_membership: public_group-group_membership

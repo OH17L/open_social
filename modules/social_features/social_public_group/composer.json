@@ -1,0 +1,7 @@
+{
+  "name": "goalgorilla/social_public_group",
+  "type": "drupal-module",
+  "require": {
+    "drupal/config_override": "1.0-beta2"
+  }
+}

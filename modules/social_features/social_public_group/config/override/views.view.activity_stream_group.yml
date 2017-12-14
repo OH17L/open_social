@@ -1,0 +1,7 @@
+display:
+  default:
+    display_options:
+      access:
+        type: group_permission
+        options:
+          group_permission: 'view stream page group'

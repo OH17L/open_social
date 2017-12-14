@@ -1,0 +1,22 @@
+name: 'Social Public Group'
+description: 'Provides Public group type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - address:address
+  - config_override:config_override
+  - drupal:field
+  - field_group:field_group
+  - gnode:gnode
+  - group:group
+  - drupal:image
+  - image_widget_crop:image_widget_crop
+  - drupal:node
+  - drupal:path
+  - social_core:social_core
+  - social_event:social_event
+  - social_group:social_group
+  - social_topic:social_topic
+  - drupal:text
+  - drupal:user
+package: Social
