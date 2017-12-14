@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.group_content.teaser
     - group.content_type.closed_group-group_node-topic
     - group.content_type.open_group-group_node-topic
+    - group.content_type.public_group-group_node-topic
     - taxonomy.vocabulary.topic_types
   module:
     - group
@@ -152,6 +153,7 @@ display:
           value:
             closed_group-group_node-topic: closed_group-group_node-topic
             open_group-group_node-topic: open_group-group_node-topic
+            public_group-group_node-topic: public_group-group_node-topic
           group: 1
           exposed: false
           expose:
@@ -366,11 +368,18 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: entity:group
             fail: 'not found'
-          validate_options: {  }
+          validate_options:
+            access: ''
+            bundles:
+              closed_group: closed_group
+              open_group: open_group
+              public_group: public_group
+            multiple: false
+            operation: view
           break_phrase: false
           not: false
           entity_type: group_content

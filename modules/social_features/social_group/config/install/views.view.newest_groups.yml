@@ -24,10 +24,9 @@ display:
     position: 0
     display_options:
       access:
-        type: role
+        type: perm
         options:
-          role:
-            authenticated: authenticated
+          perm: 'access group search'
       cache:
         type: tag
         options: {  }

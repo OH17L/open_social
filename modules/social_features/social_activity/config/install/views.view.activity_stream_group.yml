@@ -25,10 +25,9 @@ display:
     position: 0
     display_options:
       access:
-        type: role
+        type: group_permission
         options:
-          role:
-            authenticated: authenticated
+          group_permission: 'view stream page group'
       cache:
         type: none
         options: {  }

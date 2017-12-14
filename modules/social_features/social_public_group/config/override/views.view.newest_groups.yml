@@ -1,7 +1,0 @@
-display:
-  default:
-    display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access group search'

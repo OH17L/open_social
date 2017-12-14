@@ -143,6 +143,8 @@ display:
           field: type
           value:
             open_group-group_membership: open_group-group_membership
+            closed_group-group_membership: closed_group-group_membership
+            public_group-group_membership: public_group-group_membership
           entity_type: group_content
           entity_field: type
           plugin_id: bundle
