@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.group.small_teaser
     - core.entity_view_mode.group.teaser
-    - user.role.authenticated
   module:
     - group
     - user
@@ -171,7 +170,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user.roles
+        - user.permissions
       tags: {  }
   block_newest_groups:
     display_plugin: block
@@ -212,7 +211,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user.roles
+        - user.permissions
       tags: {  }
   page_all_groups:
     display_plugin: page
@@ -282,5 +281,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
+        - user.permissions
       tags: {  }

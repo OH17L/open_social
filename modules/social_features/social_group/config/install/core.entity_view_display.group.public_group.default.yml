@@ -27,5 +27,4 @@ hidden:
   field_group_image: true
   field_group_location: true
   label: true
-  langcode: true
   uid: true

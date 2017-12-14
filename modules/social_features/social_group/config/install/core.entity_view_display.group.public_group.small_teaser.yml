@@ -28,5 +28,4 @@ hidden:
   field_group_description: true
   field_group_image: true
   field_group_location: true
-  langcode: true
   uid: true

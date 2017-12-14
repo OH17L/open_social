@@ -18,5 +18,4 @@ content:
     region: content
 hidden:
   group_roles: true
-  langcode: true
   uid: true

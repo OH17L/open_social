@@ -60,5 +60,4 @@ hidden:
   changed: true
   created: true
   field_group_address: true
-  langcode: true
   uid: true

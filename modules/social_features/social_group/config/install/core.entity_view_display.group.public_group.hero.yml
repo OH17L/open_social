@@ -53,5 +53,4 @@ hidden:
   changed: true
   created: true
   field_group_description: true
-  langcode: true
   uid: true

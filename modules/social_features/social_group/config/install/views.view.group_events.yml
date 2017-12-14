@@ -5,6 +5,10 @@ dependencies:
     - core.entity_view_mode.group_content.teaser
     - group.content_type.closed_group-group_node-event
     - group.content_type.open_group-group_node-event
+    - group.content_type.public_group-group_node-event
+    - group.type.closed_group
+    - group.type.open_group
+    - group.type.public_group
   module:
     - datetime
     - group
@@ -319,15 +323,15 @@ display:
             format: default_summary
           specify_validation: true
           validate:
-            type: entity:group
+            type: 'entity:group'
             fail: 'not found'
           validate_options:
-            access: ''
+            access: false
             bundles:
               closed_group: closed_group
               open_group: open_group
               public_group: public_group
-            multiple: false
+            multiple: 0
             operation: view
           break_phrase: false
           not: false
