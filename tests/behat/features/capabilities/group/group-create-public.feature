@@ -61,7 +61,6 @@ Feature: Create Public Group
     And I should not see the link "Add a group" in the "Main content"
     And I click "Test public group"
     And I click "Members"
-    And I should see "Members of Test public group"
     And I should see "GivenUserOne"
 
     And I should see the link "Join" in the "Hero block"
@@ -85,9 +84,8 @@ Feature: Create Public Group
       | edit-field-event-date-end-0-value-date | 2025-01-01 |
       | edit-field-event-date-end-0-value-time | 11:00:00 |
       | Location name | Technopark |
-    And I click radio button "Webinar"
     And I fill in the "edit-body-0-value" WYSIWYG editor with "Body description text."
-    And I press "Save and publish"
+    And I press "Save"
     And I should see "Test group event"
     And I should see "Body description text" in the "Main content"
     And I should see the button "Enroll"
@@ -103,7 +101,7 @@ Feature: Create Public Group
     When I fill in "Title" with "Test group topic"
     And I fill in the "edit-body-0-value" WYSIWYG editor with "Body description text"
     And I click radio button "Discussion"
-    And I press "Save and publish"
+    And I press "Save"
     And I should see "Test group topic"
     And I should see "Body description text" in the "Main content"
     And I should see the link "Test public group" in the "Main content"
@@ -130,3 +128,7 @@ Feature: Create Public Group
 
     When I am on "stream"
     And I should see the link "Test public group" in the "Sidebar second"
+
+    When I logout
+    And I am on "all-groups"
+    Then I should see the link "Test public group"
